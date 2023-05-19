@@ -1,63 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&family=Sigmar&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  padding: 40px;
-}
-body h1 {
-  font-size: 24px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #e59123;
-  padding: 20px 0;
-}
-body h1:hover {
-  color: aqua;
-}
-body ol {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: rgba(238, 238, 238, 0.9333333333);
-  border: 2px solid #191919;
-  padding: 40px;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-body ol li span {
-  color: #e59123;
-}
-body ol li a {
-  color: red;
+  background-color: #00459e;
+  background-image: url("../../images/bg.svg");
+  background-position: center;
+  background-size: cover;
 }
 
-.cajas {
+.header h1 {
+  background-color: #00459e;
+  color: #191919;
+  font-size: 30px;
+  font-weight: bold;
+  border: 2px solid #191919;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px 0px rgba(25, 25, 25, 0.4705882353);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 30px;
+  gap: 15px;
+}
+section ul {
+  background-color: #00459e;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  border: 2px solid #191919;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 5px 0px rgba(25, 25, 25, 0.4705882353);
+  gap: 15px;
+}
+section ul li {
+  line-height: 30px;
+  color: #191919;
+  font-weight: bold;
+}
+section ul li:first-child {
+  text-transform: uppercase;
+  padding: 4px 0;
+  border-bottom: 1px solid #191919;
+  font-size: 24px;
+  font-weight: bold;
+}
+section ul li span {
+  color: #ff74c8;
+  font-weight: bold;
   background-color: #191919;
-  padding: 50px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
 }
-.cajas .caja {
-  background-color: #e59123;
-  color: #f8f1f1;
-  padding: 20px;
-}
-.cajas .caja .pepito-title {
-  color: red;
-  font-size: 240px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.cajas .caja p {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+.red {
+  color: rgb(246, 126, 126);
+  border-radius: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
