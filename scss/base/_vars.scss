@@ -10,3 +10,14 @@ $p-5: 50px;
 $column-2: repeat(2, 1fr);
 $column-4: repeat(4, 1fr);
 $column-6: repeat(6, 1fr);
+
+
+//MAPA
+
+$botones: (
+    primary: blue,
+    secondary: gray,
+    light: white,
+    danger: red,
+    dark: black,
+);

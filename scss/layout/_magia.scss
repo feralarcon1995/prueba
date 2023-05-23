@@ -1,0 +1,81 @@
+//CONDICIONAL IF
+$condicion: secondarsy;
+
+.cajitas {
+    background-color: #eeee;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    .boton {
+        padding: 15px;
+        background-color: #191919;
+        border-radius: 10px;
+        color: #eeee;
+        text-decoration: none;
+        @if $condicion == primary {
+            background-color: rgb(37, 37, 161);
+        } @else if $condicion == secondary {
+            background-color: rgb(105, 38, 169);
+        } @else {
+            background-color: orangered;
+        }
+    }
+}
+
+//BUCLE FOR
+
+@for $pepito from 1 through 6 {
+    h#{$pepito} {
+        font-size: 100px / $pepito;
+    }
+}
+
+//BUCLE EACH
+
+@each $btn, $color in $botones {
+    .btn-#{$btn} {
+        background-color: $color;
+        padding: 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #eeee;
+
+        &:hover {
+            background-color: darken($color, 20%);
+        }
+        @if $btn == light {
+            color: map-get($botones, dark);
+        }
+    }
+}
+//MAP-GET
+h2 {
+    color: map-get($botones, danger);
+}
+
+.card {
+    @include flexbox(row, center, center, wrap, 15px);
+    width: 400px;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid map-get($botones, dark);
+}
+
+.pepito {
+    @extend .d-flex;
+    // @include flexbox(column, between, flex-start, wrap, 20px);
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid map-get($botones, dark);
+}
+
+img {
+    @include imagenes(100%,300px,cover)
+}
