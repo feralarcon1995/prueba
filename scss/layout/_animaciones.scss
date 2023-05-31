@@ -1,0 +1,200 @@
+$botones: (
+    primary: rgb(27, 27, 171),
+    secondary: #30a2ff,
+    yellow: #ffe7a0,
+);
+
+.gradiente {
+    width: 100%;
+    height: 100vh;
+    // background: linear-gradient(67deg, #19191984, #191919c5 ) , url('https://images.unsplash.com/photo-1682258576596-33db89ab1b6b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    // background-size: cover;
+    background-image: radial-gradient(circle, #30a2ff, #ffe7a0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@each $btn, $color in $botones {
+    .cajitas-#{$btn} {
+        width: 300px;
+        height: 300px;
+        background-color: $color;
+        padding: 15px;
+        color: #191919;
+        border: 2px solid #191919;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 30px;
+
+        @if $btn == primary {
+            color: #eeee;
+        }
+    }
+}
+
+.cajitas-primary {
+    transition: 3s;
+
+    &:hover {
+        background-color: #ffe7a0;
+        width: 320px;
+        height: 320px;
+        color: #191919;
+        // transform: translateX(50%);
+    }
+}
+
+.cajitas-secondary {
+    transition: 1s;
+    &:hover {
+        transform: rotate(360deg);
+        border-radius: 100%;
+    }
+}
+
+.cajitas-yellows {
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.3, 1.3);
+        box-shadow: 4px 4px 4px 0px #eeee;
+    }
+}
+
+nav {
+    background-color: #30a2ff;
+    padding: 30px;
+
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        li {
+            list-style-type: none;
+            padding: 20px;
+            transition: 0.3s;
+
+            a {
+                text-decoration: none;
+                color: #191919;
+                font-weight: bold;
+                font-size: 24px;
+                padding: 10px 0;
+                background-image: linear-gradient(#191919, #191919);
+                background-position: 50% 100%;
+                background-repeat: no-repeat;
+                background-size: 0% 3px;
+                transition: background-size 0.3s;
+
+                &:hover {
+                    color: orangered;
+                    background-image: linear-gradient(orangered, orangered);
+                    background-size: 100% 3px;
+                }
+            }
+        }
+    }
+}
+
+.animacion {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #eeee;
+
+    .caja {
+        width: 90%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #30a2ff;
+        animation-name: animacion;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        animation-duration: 2s;
+        transform: translateX(0);
+        img {
+            width: 40%;
+        }
+        &__body {
+            padding: 10px;
+
+            h2 {
+                color: #eeee;
+            }
+        }
+    }
+}
+
+@keyframes animacion {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.carousel {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+  
+    .slide {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      animation: slide 12s infinite;
+      
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+      
+      &:nth-child(2) {
+        animation-delay: 4s;
+      }
+      
+      &:nth-child(3) {
+        animation-delay: 8s;
+      }
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  @keyframes slide {
+    0% {
+      opacity: 0;
+    }
+    
+    8% {
+      opacity: 1;
+    }
+    
+    33% {
+      opacity: 1;
+    }
+    
+    40% {
+      opacity: 0;
+    }
+  }

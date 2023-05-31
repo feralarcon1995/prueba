@@ -1,9 +1,9 @@
-body {
-    background-color: $bg-color;
-    background-image: url("../images/bg.svg");
-    background-position: center;
-    background-size: cover;
-}
+// body {
+//     background-color: $bg-color;
+//     background-image: url("../images/bg.svg");
+//     background-position: center;
+//     background-size: cover;
+// }
 
 .header h1 {
     background-color: $bg-color;
@@ -17,45 +17,45 @@ body {
 
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-    padding: 30px;
-    gap: 15px;
-    ul {
-        background-color: $bg-color;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        border: 2px solid $main-color;
-        border-radius: 10px;
-        padding: 10px;
-        box-shadow: 3px 3px 5px 0px $shadow-color;
-        gap: 15px;
+// section {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     justify-content: space-around;
+//     padding: 30px;
+//     gap: 15px;
+//     ul {
+//         background-color: $bg-color;
+//         display: flex;
+//         flex-direction: column;
+//         list-style: none;
+//         border: 2px solid $main-color;
+//         border-radius: 10px;
+//         padding: 10px;
+//         box-shadow: 3px 3px 5px 0px $shadow-color;
+//         gap: 15px;
 
-        li {
-            line-height: 30px;
-            color: $main-color;
-            font-weight: bold;
-            &:first-child {
-                text-transform: uppercase;
-                padding: 4px 0;
-                border-bottom: 1px solid $main-color;
-                font-size: 24px;
-                font-weight: bold;
-            }
-            span {
-                color: $text-color;
-                font-weight: bold;
-                background-color: #191919;
-                border-radius: 10px;
-                padding: 5px;
-            }
-        }
-    }
-}
+//         li {
+//             line-height: 30px;
+//             color: $main-color;
+//             font-weight: bold;
+//             &:first-child {
+//                 text-transform: uppercase;
+//                 padding: 4px 0;
+//                 border-bottom: 1px solid $main-color;
+//                 font-size: 24px;
+//                 font-weight: bold;
+//             }
+//             span {
+//                 color: $text-color;
+//                 font-weight: bold;
+//                 background-color: #191919;
+//                 border-radius: 10px;
+//                 padding: 5px;
+//             }
+//         }
+//     }
+// }
 
 .red {
     color: rgb(246, 126, 126);
